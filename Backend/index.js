@@ -3,25 +3,26 @@ import express from 'express'
 const app = express()
 const port = process.env.PORT || 4000
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-app.get('/instagram',(req,res) =>{
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+// })
+app.get('/api/instagram',(req,res) =>{
     res.send('@sayanarius')
 })
 
-app.get('/login', (req,res)=>{
+app.get('/api/login', (req,res)=>{
     res.send("<h1>login at this web host</h1>")
 })
 
 //get a list of 5 jokes
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
     const jokes = [
         { 
             id: 1, 
             title: "Chemistry Humor",
             joke: "Why don't scientists trust atoms? Because they make up everything!" 
         },
+        
         { 
             id: 2, 
             title: "Farm Jokes",
